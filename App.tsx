@@ -8,8 +8,11 @@ import Dates_Panel from './components/DatesPanel';
 import Divider from './components/Divider';
 import GetDirections from './components/buttons/GetDirections';
 import Heading from './components/Heading';
+import IconClose from './components/svg/IconClose';
+import IconHelp from './components/svg/IconHelp';
 import IconMore from './components/svg/IconMore';
-import IconDirections from './components/svg/IconDirections';
+import IconParking from './components/svg/IconParking';
+import Section from './components/Section';
 import { Spot } from './components/text/Headings';
 import SubHeading from './components/SubHeading';
 import Location_Address from './components/Location_Address';
@@ -66,11 +69,13 @@ const App = () => {
   return (
     <ImageBackground style={styles.container} source={ require('./assets/images/bg-map.png') } >
 
+      <IconClose onPress={ () => console.log("Close...") } style={{ marginLeft: 26, marginTop: 58 }} />
+
       <Heading text="Nice! Your Monthly parking is Confirmed." />
       <SubHeading text="Your reservation details are below." />
 
       <Card>
-
+        <IconParking style={{marginLeft: 16, marginTop: -16}}/>
         <View style={ styles.location } >
 
           <Location_Address location={ location as string } address={ address as string } />
@@ -87,6 +92,8 @@ const App = () => {
         <Ticket/>
         
         <Dates_Panel start={ start as Date } end={ end as Date } />
+
+        <Section icon={ <IconHelp/> } label="View parking instructions" />
 
         <Avatar img={ require('./assets/images/profile-picture.jpg') } size={ 60 } />
 
@@ -105,7 +112,7 @@ const styles = StyleSheet.create({
   location: {
     flexDirection: "row", 
     marginBottom: 15,
-    marginTop: 44, 
+    marginTop: 19, 
     height: 38
   },
   spot: {
