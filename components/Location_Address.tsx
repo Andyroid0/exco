@@ -3,7 +3,8 @@ import { H3 } from './text/Headings';
 import { Body2 } from './text/Body';
 
 const Component = styled.View `
-    width: 260px;
+    flex: 7;
+    width: 270px;
     height: 38px;
     margin-left: 24px;
     margin-bottom: 15px;

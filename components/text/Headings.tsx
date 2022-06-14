@@ -6,7 +6,6 @@ const H1 = styled.Text `
     font-weight: 900;
     line-height: 24px;
     text-transform: uppercase;
-    text-align: left;
 `;
 
 const H2 = styled.Text `
@@ -14,6 +13,7 @@ const H2 = styled.Text `
     font-size: 19px;
     font-weight: 900;
     line-height: 23px;
+    text-transform: uppercase;
 `;
 
 const H3 = styled.Text `

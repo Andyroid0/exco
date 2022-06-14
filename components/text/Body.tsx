@@ -46,6 +46,7 @@ const Date_label = styled.Text `
     font-weight: 500;
     letter-spacing: .5px;
     line-height: 11px;
+    text-transform: uppercase;
 `;
 
 export {

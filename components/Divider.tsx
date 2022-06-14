@@ -1,60 +1,35 @@
 import styled from 'styled-components/native';
 import { StyleProp, View } from 'react-native';
 
-const ComponentH = styled.View `
-    height: 0;
+
+const Component = styled.View `
+    height: 0px;
     width: 100%;
     border: 1px solid #EBEEF1;
-`;
-
-const ComponentH_dashed = styled.View `
-    height: 0;
-    width: 100%;
-    border: 1px dashed #EBEEF1;
 `;
 
 const ComponentV = styled.View `
-    height: 100%;
-    width: 0;
+    height: 1px;
+    width: 1px;
     border: 1px solid #EBEEF1;
 `;
-
 
 const Divider = ( 
     props: { 
         orientation: "vertical" | "horizontal", 
         indent?: boolean,
-        style: StyleProp<any>,
-        variant?: "dashed" | "solid"
+        style?: StyleProp<any>,
+        variant?: "dashed" | "solid",
+        scale?: number
 
     } ) => (
        <View style={[ props.indent && { marginLeft: "6.5%" }, props.style ]} >
             {
                 props.orientation === 'vertical' ?
                 
-                    <ComponentV/>
+                    <ComponentV style={{ transform: [{ scaleY: props.scale as number }] }}/>
                 :
-
-                props.orientation === 'horizontal' ?
-
-                    <>
-                        {
-                            props.variant === "dashed" ?
-
-                                <ComponentH_dashed/>
-                            :
-
-                            props.variant === "solid" ?
-
-                                <ComponentH/>
-                            :
-
-                                <ComponentH/>
-                        }
-                    </>
-
-                :
-                    <ComponentH/>
+                    <Component/>
             }
        </View>
 );
