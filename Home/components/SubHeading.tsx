@@ -4,7 +4,7 @@ import { Body2 } from './text/Body';
 const Component = styled.View `
     width: 311px;
     margin-left: 6.5%;
-    margin-bottom: 24px;
+    margin-bottom: 3%;
 `;
 
 const SubHeading = (props: any) => (

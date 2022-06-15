@@ -5,7 +5,9 @@ const Button_text = styled.Text `
     font-family: Rubik;
     font-size: 17px;
     font-weight: 900;
+    letter-spacing: 1px;
     line-height: 20px;
+    text-transform: uppercase;
 `;
 
 const LinkLabel = styled.Text `

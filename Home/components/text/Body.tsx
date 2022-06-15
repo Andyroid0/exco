@@ -49,11 +49,28 @@ const Date_label = styled.Text `
     text-transform: uppercase;
 `;
 
+const Name_label = styled.Text `
+    font-family: Rubik;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+`;
+
+const Role_label = styled.Text `
+    color: rgba( 0, 0, 0, .5);
+    font-family: Rubik;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 14px;
+`;
+
 export {
     Body,
     Body2,
     Caption,
     Date_time,
     Date_label,
+    Name_label,
+    Role_label,
     Subtitle,
 }
