@@ -1,5 +1,5 @@
 import styled from 'styled-components/native';
-import IconDirections from '../svg/IconDirections';
+import IconDirections from '../../../Components/svg/IconDirections';
 import { LinkLabel } from '../text/Button';
 import { View } from 'react-native';
 

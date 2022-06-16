@@ -1,4 +1,5 @@
 import Camera_ from './Camera_/Camera_';
+import Constants from 'expo-constants';
 import Home from './Home/Home';
 import routes from './routes';
 import { StatusBar } from 'expo-status-bar';
@@ -46,24 +47,24 @@ const App = () => {
 
   const [ route, setRoute ] = useState<routes>(routes.home);
 
+  const apiKey = Constants?.manifest?.extra?.MAPS_API;
 
   if ( !fontsLoaded ) {
     return <Text>Loading...</Text>;
   }
-
 
   return (
     <>  
       {
         route === routes.home ?
 
-          <Home setRoute={ setRoute } />
+          <Home setRoute={ setRoute } apiKey={apiKey} />
 
         :
-        
+
         route === routes.camera ?
 
-          <Camera_ />
+          <Camera_ setRoute={ (route: routes) => setRoute(route) }/>
 
         : null
       }

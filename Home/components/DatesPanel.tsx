@@ -4,8 +4,8 @@ import { useState, useMemo } from 'react';
 import { Date_label, Date_time } from './text/Body';
 import Divider from './Divider';
 import { H2 } from './text/Headings';
-import IconEnd from './svg/IconEnd';
-import IconStart from './svg/IconStart';
+import IconEnd from '../../Components/svg/IconEnd';
+import IconStart from '../../Components/svg/IconStart';
 import moment from 'moment';
 import { StyleSheet, View } from 'react-native';
 

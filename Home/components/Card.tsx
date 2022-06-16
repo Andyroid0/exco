@@ -6,6 +6,9 @@ const Card = styled.View `
     border-radius: 8px;
     margin-left: 4%;
     margin-right: 4%;
+    margin-bottom: 6.5%;
+    margin-top: 4%;
+    padding-bottom: auto;
     overflow-x: hidden;
 `;
 

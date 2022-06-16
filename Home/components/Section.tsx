@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 import styled from 'styled-components/native';
-import IconArrow from './svg/IconArrow';
+import IconArrow from '../../Components/svg/IconArrow';
 import { Body } from './text/Body';
 
 

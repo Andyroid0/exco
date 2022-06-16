@@ -1,7 +1,7 @@
 import Avatar from './Avatar';
 import { StyleSheet } from 'react-native';
 import styled from 'styled-components/native';
-import IconMessages from './svg/IconMessages';
+import IconMessages from '../../Components/svg/IconMessages';
 import { Name_label, Role_label } from './text/Body';
 
 const Component = styled.View `
