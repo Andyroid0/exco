@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { Dimensions, StyleSheet, View } from 'react-native';
+import { Dimensions, StyleSheet, Text, View } from 'react-native';
 
 import Avatar from '../Home/components/Avatar';
 import Card from '../Home/components/Card';
@@ -17,7 +17,6 @@ import IndentifyYourVehicle from '../Home/components/buttons/IdentifyYourVehicle
 import mapStyle from '../data/mapStyle';
 import MapView, { PROVIDER_GOOGLE, MapStyleElement } from 'react-native-maps';
 import mock from '../data/mock';
-import * as Progress from 'react-native-progress';
 import routes from "../routes";
 import Section from '../Home/components/Section';
 import { Spot } from '../Home/components/text/Headings';
@@ -84,8 +83,8 @@ const Home = ( props: { setRoute: (value: routes) => void, apiKey: string } ) =>
 
     if( loading ) {
         return (
-            <View style={{flex: 1, justifyContent: "center", alignContent: "center"}}>
-                <Progress.Circle size={30} indeterminate={true} color="#F2C840"/>
+            <View style={{flex: 1, justifyContent: "center", marginLeft: "auto", marginRight: "auto"}}>
+                <Text>Loading...</Text>
             </View>
         )
     }
