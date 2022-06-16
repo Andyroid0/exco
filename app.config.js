@@ -1,4 +1,6 @@
-{
+import 'dotenv/config';
+
+export default {
   "expo": {
     "name": "exco",
     "slug": "exco",
@@ -28,6 +30,9 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      MAPS_API: process.env.MAPS_API
     }
   }
 }
